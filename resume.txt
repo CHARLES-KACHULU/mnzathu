@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="page1.html">Hobby</a>
+        <a href="page2.html">Education</a>
+        <a href="page3.html">Travel</a>
+        <a href="page4.html">Goals</a>
+        <a href="resume.html">Resume</a>
+    </nav>
+
+    <div class="main-content">
+        <h2 class="section-heading">My Team</h2>
+        <p>Replace this with your resume content or embed a PDF link here.</p>
+    </div>
+</body>
+</html>

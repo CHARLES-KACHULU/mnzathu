@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Travelling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="page1.html">Hobby</a>
+        <a href="page2.html">Education</a>
+        <a href="page3.html">Travel</a>
+        <a href="page4.html">Goals</a>
+        <a href="resume.html">Resume</a>
+    </nav>
+
+    <div class="main-content">
+        <h2 class="section-heading">My Travel</h2>
+        <p>Paragraph 1 about your travels.</p>
+        <img src="images/page3_img1.jpg" alt="Travel Image 1">
+        <p>Paragraph 2 about your travels.</p>
+        <img src="images/page3_img2.jpg" alt="Travel Image 2">
+    </div>
+</body>
+</html>

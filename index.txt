@@ -1,0 +1,26 @@
+i want to improve color, font-size ans style of the quote in this page <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHARLLES KACHULU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body id="index">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="page1.html">Hobby</a>
+        <a href="page2.html">Education</a>
+        <a href="page3.html">Travel</a>
+        <a href="page4.html">Goals</a>
+        <a href="resume.html">Resume</a>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h1 id="main-title">CHARLES KACHULU</h1>
+        <img src=""C:\Users\Public\OneDrive\Desktop\KACHULU_Assignment3\images\myphoto.jpg"" alt="Your Photo">
+        <blockquote><b>Either you run the day or the day runs you.</b> <em>Jim Rohn</em> </blockquote>
+    </div>
+</body>
+</html>
