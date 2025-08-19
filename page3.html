@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Travel - Charles Kachulu</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFA500; /* sour-orange margins */
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Page Wrapper ===== */
+.page-wrapper {
+    display: flex;
+    max-width: 1215px;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* ===== Sidebar ===== */
+#sidebar {
+    width: 100px;
+    background: cadetBlue;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 42%;
+    transform: translateX(-500px);
+    overflow-y: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin: 8px 0;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+
+#sidebar ul li a:hover {
+    background: #444;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    margin-left: 130px; /* space for fixed sidebar */
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* space for footer */
+}
+
+h2.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.section {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.travel-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.travel-grid .img-container {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.travel-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 42%;
+    transform: translateX(-500px);
+    width: 1215px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1px 2px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+    font-size: 0.85rem;
+}
+
+footer a:hover {
+    background: blue;
+    color: yellow;
+}
+
+footer img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .page-wrapper { flex-direction: column; max-width: 95%; }
+    #sidebar { position: relative; left: 0; transform: none; width: 100%; border-radius: 0; display: flex; justify-content: center; border-bottom: 2px solid #fff4e6; }
+    .main-content { margin-left: 0; padding: 12px; }
+    footer { width: 100%; left: 0; transform: none; border-radius: 0; }
+}
+
+@media (max-width: 600px) {
+    #sidebar ul { display: flex; justify-content: space-around; }
+    .travel-grid { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Hobby</a></li>
+            <li><a href="page2.html">Education</a></li>
+            <li><a href="page3.html">Travel</a></li>
+            <li><a href="page4.html">Goals</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2 class="section-heading">My Travel Experiences</h2>
+
+        <div class="section">
+            <p>I love exploring new places and immersing myself in different cultures. Traveling allows me to experience diverse landscapes, meet amazing people, and create unforgettable memories.</p>
+        </div>
+
+        <div class="travel-grid">
+            <div class="img-container">
+                <img src="images/mulanje.jpg" alt="Travel Destination 1">
+                <div class="overlay">Mr. Jamu at <i>Dziwe la mkhalamba Waterfalls</i> I visited last summer</div>
+            </div>
+            <div class="img-container">
+                <img src="images/naming'omba.jpg" alt="Travel Destination 2">
+                <div class="overlay">Naming'omba Tea Estate in Thyolo</div>
+            </div>
+            <div class="img-container">
+                <img src="images/likoma.jpg" alt="Travel Destination 3">
+                <div class="overlay">Likoma Islands on Lake Malawi</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <p>Traveling has taught me to be more adaptable, open-minded, and appreciative of the world’s beauty. Every trip adds a new story to my life and inspires me to explore further.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <span>Connect with me:</span>
+        <a href="https://wa.me/265888954444" target="_blank"><img src="images/whatsapp.webp" alt="WhatsApp"> WhatsApp</a>
+        <a href="https://web.facebook.com/mnzathu.senior/" target="_blank"><img src="images/facebook.jpeg" alt="Facebook"> Facebook</a>
+        <a href="mailto:charleskachulu@gmail.com" target="_blank"><img src="images/email.webp" alt="Email"> Email</a>
+    </div>
+</footer>
+
+</body>
+</html>

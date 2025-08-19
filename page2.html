@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Education - Charles Kachulu</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFA500; /* margin background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Page Wrapper ===== */
+.page-wrapper {
+    display: flex;
+    max-width: 1900px;
+    width: 150%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* ===== Sidebar ===== */
+#sidebar {
+    width: 100px;
+    background: cadetBlue;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 42%;
+    transform: translateX(-500px);
+    overflow-y: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin: 8px 0;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+
+#sidebar ul li a:hover {
+    background: #444;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    margin-left: 160px;
+    flex: 1;
+    padding: 30px;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* space for footer */
+}
+
+h2.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* Education Grid */
+.education-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.education-card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.education-text {
+    padding: 12px 15px;
+}
+
+.education-text h3 {
+    margin-top: 0;
+}
+
+.education-text p {
+    color: #555;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 34.5%;
+    transform: translateX(-400px);
+    width: 1215px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1px 2px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+    font-size: 0.85rem;
+}
+
+footer a:hover {
+    background: blue;
+    color: yellow;
+}
+
+footer img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .page-wrapper { flex-direction: column; max-width: 95%; }
+    #sidebar { position: relative; left: 0; transform: none; width: 100%; border-radius: 0; display: flex; justify-content: center; border-bottom: 2px solid #fff4e6; }
+    .main-content { margin-left: 0; padding: 12px; }
+    .education-grid { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    #sidebar ul { display: flex; justify-content: space-around; }
+    .education-grid { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Hobby</a></li>
+            <li><a href="page2.html">Education</a></li>
+            <li><a href="page3.html">Travel</a></li>
+            <li><a href="page4.html">Goals</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2 class="section-heading">My Education</h2>
+
+        <div class="education-grid">
+
+            <div class="education-card">
+                <img src="images/school.jpg" alt="High School">
+                <div class="education-text">
+                    <h3>St. Patricks Secondary School</h3>
+                    <p>I completed my secondary education at <b>St. Patricks Secondary School</b> in 2008, where I obtained Malawi School Certificate of Education. I excelled in Sciences and Mathematics and participated in various extracurricular activities including debate and sports.</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <img src="images/domasi.jpg" alt="Domasi College of Education">
+                <div class="education-text">
+                    <h3>Domasi College of Education</h3>
+                    <p>I attended <b>Domasi College of Education</b>, specializing in Secondary School Education. I gained practical teaching experience and developed my skills in lesson planning and classroom management.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <span>Connect with me:</span>
+        <a href="https://wa.me/265888954444" target="_blank"><img src="images/whatsapp.webp" alt="WhatsApp"> WhatsApp</a>
+        <a href="https://web.facebook.com/mnzathu.senior/" target="_blank"><img src="images/facebook.jpeg" alt="Facebook"> Facebook</a>
+        <a href="mailto:charleskachulu@gmail.com" target="_blank"><img src="images/email.webp" alt="Email"> Email</a>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHARLES KACHULU</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: seaShell;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.page-wrapper {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: lightGray;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+
+#sidebar {
+    width: 100px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 42%;
+    transform: translateX(-500px); 
+    overflow-y: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin: 8px 0;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+
+#sidebar ul li a:hover {
+    background: #444;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    margin-left: 140px; /* space for fixed sidebar */
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* space for footer */
+}
+
+.profile-header { text-align: center; margin-bottom: 30px; }
+.profile-header h1 { margin-top: 15px; font-size: 2rem; color: #222; }
+
+section {
+    background: #fff;
+    padding: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+
+section h2 {
+    margin: 0 0 15px;
+    color: blue;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+}
+
+#birth-early-life { background: mintCream; }
+#marriage-family { background: #f0f0f0; }
+#food { background: moccasin; }
+#beliefs { background: #fff4e6; }
+#career { background: #ffe6e6; }
+#edu-report { background: #fff4e6; }
+
+.profile-pic {
+    width: 180px;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.img-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.img-row img {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.img-row div { text-align: center; }
+
+/* ===== Footer ===== */
+footer {
+    background: cadetBlue;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 42%;
+    transform: translateX(-500px); /* center with page */
+    width: 1209px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1px 2px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+    font-size: 0.85rem;
+}
+
+footer a:hover {
+    background: blue;
+    color: yellow;
+}
+
+footer img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .page-wrapper {
+        flex-direction: column;
+        max-width: 95%;
+    }
+    #sidebar {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #fff4e6;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 12px;
+    }
+    footer {
+        width: 100%;
+        left: 0;
+        transform: none;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #sidebar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-content {
+        padding: 8px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Hobby</a></li>
+            <li><a href="page2.html">Education</a></li>
+            <li><a href="page3.html">Travel</a></li>
+            <li><a href="page4.html">Goals</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="profile-header">
+            <img src="images/myphoto.jpg" alt="Charles Kachulu" class="profile-pic">
+            <h1>CHARLES KACHULU</h1>
+        </div>
+
+        <blockquote style="color: purple; text-align: right">
+            <b>Either you run the day or the day runs you.</b>
+            <em>– Jim Rohn</em>
+        </blockquote>
+
+        <!-- Place of Birth and Early Life -->
+        <section id="birth-early-life">
+            <h2>Place of Birth and Early Life</h2>
+            <p>I was born in Thyolo, Malawi, in a vibrant and close-knit Goliati community. I grew up in a family of three brothers. My mother raised us on her own, teaching us the values of respect, resilience, and hard work. My childhood was full of outdoor games, exploration, and learning through curiosity. Family gatherings and cultural events shaped my early understanding of heritage and community. School was a place of discovery, where I cultivated my love for learning and developed a strong sense of discipline and responsibility.</p>
+            <div class="img-row">
+                <div><img src="images/tchopa2.jpg" alt="Lhomwe Tchopa dance" width="300" height="200"><p>Lhomwe <i>Tchopa dance</i></p></div>
+                <div><img src="images/mice-hunting.webp" alt="Boys hunting mice" width="280" height="200"><p>Lhomwe <i>Boys hunting mice</i></p></div>
+            </div>
+        </section>
+
+        <!-- Marriage Life and Family -->
+        <section id="marriage-family">
+            <h2>Marriage Life and Family</h2>
+            <p>I was born in a family of three brothers—Patrick, Lameck, and myself—and was raised solely by my mother. I am happily married to Leah, and together we have three wonderful children: Ella, Chauncy, and Desmond. Family is the cornerstone of my life, and I cherish spending time with my wife and kids, nurturing their growth, and creating lasting memories.</p>
+            <div class="img-row">
+                <div><img src="images/leah.jpg" alt="Leah" width="150" height="150"><p>Wifey Leah</p></div>
+                <div><img src="images/ella.jpg" alt="Ella" width="150" height="150"><p>Ella</p></div>
+                <div><img src="images/chauncy.jpg" alt="Chauncy" width="150" height="150"><p>Chauncy</p></div>
+                <div><img src="images/desmond.jpg" alt="Desmond" width="150" height="150"><p>Des</p></div>
+            </div>
+        </section>
+
+        <!-- Food I Love to Eat -->
+        <section id="food">
+            <h2>Food I Love to Eat</h2>
+            <p>Food is a source of comfort and joy. I enjoy traditional Malawian dishes like <b>Nsima with chicken stew</b>, fresh vegetables, and spicy relishes. Grilled fish from Lake Malawi is a favorite. Cooking allows me to experiment with flavors and create memorable experiences with loved ones.</p>
+            <div class="img-row">
+                <img src="images/nsima.jpg" alt="Nsima with Stew" width="150" height="110">
+                <img src="images/banana.webp" alt="Grilled Fish" width="150" height="110">
+                <img src="images/chips.jpg" alt="Chips" width="150" height="110">
+            </div>
+        </section>
+
+        <!-- Beliefs -->
+        <section id="beliefs">
+            <h2>My Beliefs and Philosophy About Life</h2>
+            <p>I believe that life is a continuous journey of growth and learning. Challenges are opportunities to strengthen character, and empathy and honesty guide my interactions. I am committed to helping others and giving back to the community. Gratitude, mindfulness, and optimism are essential to living a fulfilled life.</p>
+        </section>
+
+        <!-- Career -->
+        <section id="career">
+            <h2>Career and Professional Life</h2>
+            <p>I have developed a career in education and business technology, focusing on innovative solutions for schools. I have designed online school report systems, automated student ranking, and developed apps for school finance management. My work combines my passion for technology and education, allowing me to positively impact both teachers and students.</p>
+        </section>
+
+        <!-- Innovation -->
+        <section id="edu-report">
+            <h2>Innovation: Mnzathu EduReport</h2>
+            <p><strong>Mnzathu EduReport</strong> is my innovative online school report system that simplifies result management for teachers, students, and parents, offering fast, secure, and real-time access.</p>
+            <p><strong>Key Features:</strong><br>
+                • Teacher-specific login.<br>
+                • Students and parents access results anytime.<br>
+                • Automatic grading and ranking.<br>
+                • Standardized and printable reports.<br>
+                • Cumulative performance tracking.
+            </p>
+            <p><em>Mnzathu EduReport makes school reports seamless, secure, and accessible to all.</em></p>
+        </section>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <span>Connect with me:</span>
+        <a href="https://wa.me/265888954444" target="_blank"><img src="images/whatsapp.webp" alt="WhatsApp"> WhatsApp</a>
+        <a href="https://web.facebook.com/mnzathu.senior/" target="_blank"><img src="images/facebook.jpeg" alt="Facebook"> Facebook</a>
+        <a href="mailto:charleskachulu@gmail.com" target="_blank"><img src="images/email.webp" alt="Email"> Email</a>
+    </div>
+</footer>
+
+</body>
+</html>
